@@ -1,0 +1,136 @@
+\documentclass{cubeamer}
+
+\title{Proyecto Segundo Parcial}
+\subtitle{Métodos Numéricos}
+\author[Equipo 4]{Nicolás Gamboa \and Axel Correa \and Javier Tena \and Fernando Arrieta \and Juan Suástegui}
+\date{\today} % or whatever the date you are presenting in is
+\institute[Instituto Tecnológico y de Estudios Superiores de Monterrey]{Instituto Tecnológico y de Estudios Superiores de Monterrey}
+
+\begin{document}
+
+\maketitle
+
+\cutoc
+
+\section{Introducción}
+
+\begin{frame}{Descripción del problema a resolver}
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height = 0.3\textheight]{img/Constru.jpg}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.7\textwidth}
+        \textsc{Una compañía constructora de estructura tiene la siguiente distribución de productos y materiales: en el producto A se gastan 400 kg de cemento, 1700 kg de hormigón y 600 kg de acero. En B se consumen 600 kg de cemento, 550 Kg de hormigón y 450 kg de acero y finalmente en el C, se consumen 300 kg de cemento, 400 kg de hormigón y 375 acero.
+        Si el consumo dentro de la empresa ha sido de 300 toneladas de cemento, 480 toneladas de hormigón y 375 toneladas de acero, determina cuentos tipos de productos de cada tipo han construido en la empresa.}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Descripción del problema a resolver}
+    \begin{table}[t]
+    \begin{center}
+    \begin{tabular}{| c | c | c | c | c | }
+    \hline
+         & A & B & C & Consumo \\ \hline
+        Cemento & 400 & 600 & 300 & 300,000 \\
+        Hormigón & 1700 & 550 & 400 & 480,000 \\
+        Acero & 600 & 450 & 375 & 375,000 \\ \hline
+    \end{tabular}
+    \caption{Matriz de Problema}
+    \end{center}
+    \end{table}
+\end{frame}
+
+\section{Desarrollo}
+
+\begin{frame}{Desarrollo}
+\begin{columns}
+    \begin{column}{0.7\textwidth}
+    \textsc{Mediante el análisis del problema observamos que es un sistema de ecuaciones lineales a las cuales se les aplicara tres métodos seleccionamos para observar que resultado obtendremos y obtener las conclusiones pertinentes para el problema}
+    \end{column}
+     \begin{column}{0.4\textwidth}
+     \begin{itemize}
+      \item Método de eliminación Gausiana.
+      \item Método Gauss-Jordan.
+      \item Método de Cramer.
+\end{itemize}
+     \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Desarrollo}
+    \textsc{Método de Cramer}
+   \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height = 0.4\textheight]{img/Cramer 1.jpeg}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+        \begin{figure}
+                \centering
+                \includegraphics[height = 0.4\textheight]{img/Cramer 2.jpeg}
+            \end{figure}
+        \end{column}
+    \end{columns}   
+    
+
+\end{frame}
+
+\begin{frame}{Desarrollo}
+    \textsc{Método de eliminación Gausiana}
+   \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height = 0.4\textheight]{img/EG 1.jpeg}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+        \begin{figure}
+                \centering
+                \includegraphics[height = 0.4\textheight]{img/EG 2.jpeg}
+            \end{figure}
+        \end{column}
+    \end{columns}   
+    
+\end{frame}
+
+\begin{frame}{Desarrollo}
+    \textsc{Método de Gauss-Jordan}
+   \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[height = 0.4\textheight]{img/GJ 1.jpeg}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+        \begin{figure}
+                \centering
+                \includegraphics[height = 0.4\textheight]{img/GJ3.jpeg}
+            \end{figure}
+        \end{column}
+    \end{columns}   
+    
+
+\end{frame}
+
+
+\section{Conclusión}
+
+\begin{frame}{Conclusión}
+  En conclusión después de aplicar todos tres métodos para la problemática mencionada nos damos cuenta que se fabricaron en total del Producto A = 74, Producto B = 25 y del Producto C = 852, asimismo se comprobó que el funcionamiento de los métodos es diferente en cada uno, sin embargo nos llevan al mismo resultado y que con la herramienta de MatLab es muy sencillo e eficiente para realizar estos cálculos.
+\end{frame}
+
+\begin{frame}[standout]
+    \Huge\textsc{Muchas Gracias}
+\end{frame}
+
+\appendix
+
+\end{document}

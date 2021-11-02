@@ -1,0 +1,180 @@
+\documentclass[fleqn,10pt]{olplainarticle}
+% Use option lineno for line numbers 
+
+\title{Segundo Proyecto Parcial}
+
+\author[1]{Nicolás Gamboa}
+\author[2]{Axel Correa}
+\author[3]{Javier Tena}
+\author[4]{Fernando Arrieta}
+\author[5]{Juan Suástegui}
+\affil[1]{A01636262}
+\affil[2]{A01636607}
+\affil[3]{A01067470}
+\affil[4]{A01336257}
+\affil[5]{A01066742}
+
+
+\keywords{Matriz, Ecuaciones Lineales, Métodos Numéricos}
+
+\begin{abstract}
+The following report will explain and demonstrate how linear equations can be applied in the context of civil engineering and can serve as a tool to solve a problem, as well as how the methods observed in class can be applied to the same set of equations to obtain the same result and obtain the relevant conclusions.  
+\end{abstract}
+
+\begin{document}
+
+\flushbottom
+\maketitle
+\thispagestyle{empty}
+
+\section*{Introducción}
+
+Mediante los diversos temas observados en este segundo parcial de métodos numéricos se ha buscado una problemática aplicable a los conocimiento aprendidos, asimismo mediante el uso de diversas herramientas también usadas en clase con la finalidad de poner en practica lo aprendido.
+Para este proyecto parcial fue necesario encontrar una problemática en el área de estudio de la ingeniería civil, en donde se pudieran aplicar los conocimientos de la clase, asimismo se seleccionaron 3 métodos:
+ \begin{itemize}
+      \item Método de eliminación Gausiana.
+      \item Método Gauss-Jordan.
+      \item Método de Cramer.
+\end{itemize}
+
+\section*{Descripción del problema a resolver}
+
+Una compañía constructora de estructura tiene la siguiente distribución de productos y materiales: en el producto A se gastan 400 kg de cemento, 1700 kg de hormigón y 600 kg de acero. En B se consumen 600 kg de cemento, 550 Kg de hormigón y 450 kg de acero y finalmente en el C, se consumen 300 kg de cemento, 400 kg de hormigón y 375 acero.
+Si el consumo dentro de la empresa ha sido de 300 toneladas de cemento, 480 toneladas de hormigón y 375 toneladas de acero, determina cuentos tipos de productos de cada tipo han construido en la empresa.
+
+    
+\subsection*{Cálculos}
+Después de analizar el problema obtenemos la matriz inicial, observable en la Tabla 1, la cual es punto de inició para la aplicación de los métodos observados en clase.
+
+ \begin{table}[ht]
+    \begin{center}
+    \begin{tabular}{| c | c | c | c | c | }
+    \hline
+         & A & B & C & Consumo \\ \hline
+        Cemento & 400 & 600 & 300 & 300,000 \\
+        Hormigón & 1700 & 550 & 400 & 480,000 \\
+        Acero & 600 & 450 & 375 & 375,000 \\ \hline
+    \end{tabular}
+    \caption{Matriz de Problema}
+    \end{center}
+\end{table}
+
+Después de procedió a ingresar matriz para hacer el calculo correspondiente con el método de Cramer, como se observa en la Figura 1 podemos observar la aplicación del método de Cramer encontrando DetS para posteriormente obtener sucesivamente DetX y de esta manera encontrar la solución de X.
+Posteriormente se realizaría el mismo proceso para encontrar la solución Y.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.7\linewidth]{Imagenes/Cramer 1.jpeg}
+\caption{Primer paso del método de Cramer.}
+\end{figure}
+
+Finalmente se obtuvo DetZ para encontrar la solución de Z.
+Concluyendo el método Cramer, Figura 2.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{Imagenes/Cramer 2.jpeg}
+\caption{Segundo paso del método de Cramer.}
+\end{figure}
+
+Continuado con el segundo método de eliminación Gausiana, Figura 3, en el cual procedemos a buscar mediante la multiplicación y sustituciones de valores en la matriz un valor el cual se pueda despejar para después proceder a realizar el sistema de ecuaciones para obtener las soluciones X, Y, Z.
+Como se aprecia solo fueron necesaria tres iteraciones para poder encontrar el valor solución de Z.
+\\
+\smallskip
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.9\linewidth]{Imagenes/EG 1.jpeg}
+\caption{Primer paso del método de Eliminación Gausiana.}
+\end{figure}
+
+Finalmente se concluye el sistema de ecuaciones para obtener las soluciones de Y, X, Figura 4. 
+\smallskip
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\linewidth]{Imagenes/EG 2.jpeg}
+\caption{Segundo paso del método de Eliminación Gausiana.}
+\end{figure}
+
+Para concluir aplicaremos el tercer y ultimó método de Gauss Jordan el cual consta mediante la multiplicación y sustitución de valores llegar a realizar una matriz diagonal de 1 para encontrar las soluciones de X, Y, Z. 
+\smallskip
+
+A continuación en la Figura 5 mostraremos las iteraciones iniciales.
+\\
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{Imagenes/GJ 1.jpeg}
+\caption{Primer paso del método de Gauss Jordan.}
+\end{figure}
+
+Como se observa 3 iteraciones no fueron suficientes para poder obtener la matriz diagonal por lo cual se continúa intentando hasta obtenerlo, Figura 6.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{Imagenes/GJ 2.jpeg}
+\caption{Segundo paso del método de Gauss Jordan.}
+\end{figure}
+
+Finalmente en la sexta iteración podemos observar parcialmente la diagonal esperada para concluir con una ultima iteración y así observar el valor de la solución para X,Y,Z, Figura 7.   
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{Imagenes/GJ3.jpeg}
+\caption{Tercer paso del método de Gauss Jordan.}
+\end{figure}
+
+\subsection*{Resultados}
+
+Primer resultado mediante método de Cramer:
+
+\begin{enumerate}[noitemsep] 
+\item A = 73.8462
+\item B = 24.6154
+\item C = 852.3077
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\linewidth]{Imagenes/MC.jpeg}
+\caption{Solución en MatLab del método de Cramer .}
+\end{figure}
+
+Segundo resultado mediante método de Gauss Jorda:
+
+\begin{enumerate}[noitemsep] 
+\item A = 73.8462
+\item B = 24.6154
+\item C = 852.3077
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\linewidth]{Imagenes/MGJ.jpeg}
+\caption{Solución en MatLab del método de Gauss Jordan.}
+\end{figure}
+
+Primer resultado mediante método de Eliminación:
+
+\begin{enumerate}[noitemsep] 
+\item A = 73.8462
+\item B = 24.6154
+\item C = 852.3077
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.6\linewidth]{Imagenes/MEG.jpeg}
+\caption{Solución en MatLab del método de Eliminación.}
+\end{figure}
+
+
+
+\section*{Conclusiones}
+
+En conclusión después de aplicar todos tres métodos para la problemática mencionada nos damos cuenta que se fabricaron en total del Producto A = 74, Producto B = 25 y del Producto C = 852, asimismo se comprobó que el funcionamiento de los métodos es diferente en cada uno, sin embargo nos llevan al mismo resultado y que con la herramienta de MatLab es muy sencillo e eficiente para realizar estos cálculos.
+
+\end{document}
